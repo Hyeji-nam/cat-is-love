@@ -59,8 +59,8 @@ let photos = [
   },
   {
     idx: 7,
-    user_id: 'photo-luv',
-    user_name: 'zuri',
+    user_id: 'hyzzzii',
+    user_name: 'judy',
     file_name: 'photo_7.jpg',
     description: '제 학점이 낮을 수밖에 없는 이유',
     likes: 7,
