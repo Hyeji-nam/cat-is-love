@@ -1,6 +1,6 @@
 // 메뉴 이동
 function setMenu(_menu) {
-  var filterButtons = document.querySelectorAll("nav li");
+  let filterButtons = document.querySelectorAll("nav li");
   filterButtons.forEach(function (filterButton) {
     filterButton.classList.remove("on");
   });
@@ -9,17 +9,17 @@ function setMenu(_menu) {
 }
 
 // 정렬 방식
-var sorts = {
+let sorts = {
   recent: function (a, b) { return (a.idx > b.idx) ? -1 : 1 },
   like: function (a, b) { return (a.likes > b.likes) ? -1 : 1 },
 }
 
 // 현재 선택된 정렬
-var sort = sorts.recent;
+let sort = sorts.recent;
 
 // 정렬 설정 & 적용
 function setSort(_sort) {
-  var sortButtons = document.querySelectorAll("#sorts li");
+  let sortButtons = document.querySelectorAll("#sorts li");
   sortButtons.forEach(function (sortButton) {
     sortButton.classList.remove('on');
   })
@@ -29,7 +29,7 @@ function setSort(_sort) {
 }
 
 // 필터 방식
-var filters = {
+let filters = {
   all: function (it) { return true; },
   mine: function (it) { return it.user_id === my_info.id; },
   like: function (it) { return my_info.like.indexOf(it.idx) > -1; },
@@ -37,11 +37,11 @@ var filters = {
 }
 
 // 현재 선택된 필터
-var filter = filters.all;
+let filter = filters.all;
 
 // 필터 설정 & 적용
 function setFilter(_filter) {
-  var filterButtons = document.querySelectorAll("#filters li");
+  let filterButtons = document.querySelectorAll("#filters li");
   filterButtons.forEach(function (filterButton) {
     filterButton.classList.remove('on');
   });
@@ -55,20 +55,20 @@ function setFilter(_filter) {
 function showPhotos () {
 
   // 현재 화면의 사진들 삭제
-  var existingNodes 
+  let existingNodes 
     = document.querySelectorAll("#gallery article:not(.hidden)");
   existingNodes.forEach(function (existingNode) {
     existingNode.remove();
   });
 
   // 갤러리 div 선택
-  var gallery = document.querySelector("#gallery");
-  var filtered = photos.filter(filter);
+  let gallery = document.querySelector("#gallery");
+  let filtered = photos.filter(filter);
   filtered.sort(sort);
 
   // 필터된 사진들 화면에 나타내기
   filtered.forEach(function (photo) {
-    var photoNode = document.querySelector("article.hidden").cloneNode(true);
+    let photoNode = document.querySelector("article.hidden").cloneNode(true);
     photoNode.classList.remove("hidden");
     photoNode.querySelector(".author").innerHTML = photo.user_name;
     photoNode.querySelector(".desc").innerHTML = photo.description;
@@ -89,7 +89,7 @@ function showPhotos () {
 function toggleLike(idx) {
   if (my_info.like.indexOf(idx) === -1) {
     my_info.like.push(idx);
-    for (var i = 0; i < photos.length; i++) {
+    for (let i = 0; i < photos.length; i++) {
       if (photos[i].idx === idx) {
         photos[i].likes++;
         break;
@@ -99,7 +99,7 @@ function toggleLike(idx) {
     my_info.like = my_info.like.filter(
       function (it) { return it !== idx; }
     );
-    for (var i = 0; i < photos.length; i++) {
+    for (let i = 0; i < photos.length; i++) {
       if (photos[i].idx === idx) {
         photos[i].likes--;
         break;
@@ -118,7 +118,7 @@ function setDescLength () {
 function updateMyInfo () {
   my_info.introduction = document.querySelector("#ip-intro").value;
   my_info.as = document.querySelector("#myinfo input[type=radio]:checked").value;
-  var interests = [];
+  let interests = [];
   document.querySelectorAll("#myinfo input[type=checkbox]:checked").forEach(function (checked) {
     interests.push(checked.value);
   });

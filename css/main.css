@@ -12,7 +12,7 @@ header {
   width: 100vw;
   height: 64px;
   line-height: 64px;
-  background-color: #ff4500;
+  background-color: #24292f;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 header .logo {
@@ -21,6 +21,16 @@ header .logo {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+header .logo .logo-img {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+header .logo .logo-img img{
+  width: 42px;
 }
 header .nav {
   grid-area: nav;
@@ -199,7 +209,7 @@ article .info .desc {
   display: inline-block;
   padding: 14px 24px;
   color: white;
-  background-color: #ff4500;
+  background-color: #24292f;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -258,7 +268,7 @@ main .write div {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background-color: #ff4500;
+  background-color: #24292f;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   background-image: url("../img/interface//camera.png");

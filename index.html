@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css"/> 
-  <link rel="stylesheet" type="text/css" href="css/main.css"/> 
-  <script src="js/data.js"></script>
-  <script src="js/script.js"></script>
+  <title>Cat is Love</title>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css"/> 
+  <link rel="stylesheet" type="text/css" href="./css/main.css"/> 
+  <link rel="icon" href="./img/photo/cat-face.png"> 
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
 </head>
 <body onload="init()">
   <header>
-    <a class="logo" href="#">Portfolio</a>
+    <a class="logo" href="/">Cat is 
+      <span class="logo-img">
+        <img src="./img/photo/red-heart.png" alt="red-heart">
+      </span>
+    </a>
     <nav class="nav">
       <ul>
-        <li class="gallery on" onclick="setMenu('gallery')">사진들 보기</li>
-        <li class="upload" onclick="setMenu('upload')">사진 올리기</li>
-        <li class="myinfo" onclick="setMenu('myinfo')">내 정보</li>
+        <li class="gallery on" onclick="setMenu('gallery')">Gallery</li>
+        <li class="upload" onclick="setMenu('upload')">Upload</li>
+        <li class="myinfo" onclick="setMenu('myinfo')">About</li>
       </ul>
     </nav>
     <a class="account" href="#">Logout</a>
@@ -32,7 +38,7 @@
       </ul>
       <ul id="filters" class="dep _gallery">
         <li class="all on" onclick="setFilter('all')">전체 사진</li>
-        <li class="mine" onclick="setFilter('mine')">내 사진 사진</li>
+        <li class="mine" onclick="setFilter('mine')">내 사진</li>
         <li class="like" onclick="setFilter('like')">좋아요 한 사진</li>
         <li class="follow" onclick="setFilter('follow')">팔로우 회원 사진</li>
       </ul>

@@ -1,7 +1,7 @@
 var my_info = {
-  id: 'fastcampus',
-  user_name: "패캠",
-  introduction: "사진 찍는 걸 좋아하는 프로그래머 지망생입니다.",
+  id: 'hyzzzii',
+  user_name: "혜지",
+  introduction: "고양이를 좋아하는 프로그래머 지망생입니다.",
   as: "hobby",
   interest: ["nature", "thing"],
   like: [2, 5, 9],
