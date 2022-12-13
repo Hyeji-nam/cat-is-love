@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat is Love</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" type="text/css" href="./css/reset.css"/> 
   <link rel="stylesheet" type="text/css" href="./css/main.css"/> 
   <link rel="icon" href="./img/photo/cat-face.png"> 
@@ -25,7 +29,7 @@
         <li class="myinfo" onclick="setMenu('myinfo')">About</li>
       </ul>
     </nav>
-    <a class="account" href="#">Logout</a>
+    <a class="account" href="javascript:void(0)">Logout</a>
   </header>
   <main class="gallery">
     <aside>
@@ -46,10 +50,10 @@
     <div class="content">
 
       <section id="intro" class="dep _gallery ">
-        <h1>포트폴리오입니다.</h1>
+        <h1>집사들의 고양이 갤러리</h1>
         <p>
-          수많은 이용자들이 공유하는 멋진 사진들을 구경하고<br>
-          내가 직접 찍은 작품들을 공유하세요!
+          수많은 집사들이 공유하는 고양이 사진들을 구경하고<br>
+          나의 애완묘를 소개해 보세요!
         </p>
       </section>
 
@@ -66,7 +70,7 @@
       </section>
 
       <section id="upload" class="dep _upload">
-        <div class="instruction">나만의 특별한 사진을 업로드합니다.</div>
+        <div class="instruction">나의 애완묘 사진을 업로드합니다.</div>
         <input class="description" type="text" maxlength="20" placeholder="사진 설명을 20자 이내로 적어주세요." onkeyup="setDescLength()"/>
         <span class="descLength">0/20</span>
         <br>
@@ -104,7 +108,7 @@
               </td>
             </tr>
             <tr>
-              <td>흥미</td>
+              <td>관심 분야</td>
               <td>
                 <input class="cb-interest" id="nature" type="checkbox" value="nature" disabled/>
                 <label for="nature">자연</label>
@@ -130,11 +134,10 @@
   </main>
   <footer>
     <ul>
-      <li><a href="#">회사소개</a></li>
-      <li><a href="#">인재채용</a></li>
-      <li><a href="#">이용약관</a></li>
-      <li><a href="#">개인정보 보호</a></li>
-      <li><a href="#">고객센터</a></li>
+      <li><a href="javascript:void(0)">갤러리 소개</a></li>
+      <li><a href="javascript:void(0)">이용약관</a></li>
+      <li><a href="javascript:void(0)">개인정보 보호</a></li>
+      <li><a href="javascript:void(0)">고객센터</a></li>
     </ul>
   </footer>
   
